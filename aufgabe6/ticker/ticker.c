@@ -58,9 +58,7 @@ int main(int argc, char* argv[]){
 	fprintf(stderr,"ready ...\n");
 	
 	while(turn <= lap){
-		sem_wait(&sem);
-		kill(SIGINT,pid);
-		kill(SIGTERM,pid);
+		sem_wait(&sem); //TODO
 	}
 
 	fastest = *time;
